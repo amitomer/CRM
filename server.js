@@ -16,7 +16,7 @@ app.use(express.static('node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', api);
-app.listen(SERVER_PORT, () => {
+app.listen(process.env.PORT || SERVER_PORT, () => {
   console.log("Server started on port " + SERVER_PORT);
 });
 
