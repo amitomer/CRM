@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var api = require('./server/api');
 
-const SERVER_PORT = process.env.PORT || 8080;
+const SERVER_PORT = process.env.PORT ;
 var app = express();
 
 app.use(function (req, res, next) {
