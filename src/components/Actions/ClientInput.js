@@ -13,7 +13,7 @@ class ClientInput extends Component {
         }
       }
     async componentDidMount (){
-        let data = await axios.get('http://localhost:8080/actions');
+        let data = await axios.get('/actions');
         this.setState({ data: data.data })
     }
     updateText = (event) => {

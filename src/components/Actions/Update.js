@@ -12,7 +12,7 @@ class Update extends Component {
     }
   }
   async componentDidMount() {
-    let data = await axios.get('http://localhost:8080/actions');
+    let data = await axios.get('/actions');
     this.setState({ data: data.data })
   }
   updateText = (event) => {
@@ -39,7 +39,7 @@ class Update extends Component {
       return;
     }
     const clientId = this.findClientIdByName(this.props.client);
-    await axios.put(`http://localhost:8080/actions/owner/${clientId}`, { owner: this.state.owner });
+    await axios.put(`/actions/owner/${clientId}`, { owner: this.state.owner });
     alert('The client has been updated.')
   }
   changeEmail = async () => {
@@ -49,7 +49,7 @@ class Update extends Component {
       return;
     }
     const clientId = this.findClientIdByName(this.props.client);
-    await axios.put(`http://localhost:8080/actions/email/${clientId}`, { emailType: this.state.email });
+    await axios.put(`/actions/email/${clientId}`, { emailType: this.state.email });
     alert('The client has been updated.')    
   }
   changeSold = async () => {
@@ -59,7 +59,7 @@ class Update extends Component {
       return;
     }
     const clientId = this.findClientIdByName(this.props.client);
-    await axios.put(`http://localhost:8080/actions/sold/${clientId}`);
+    await axios.put(`/actions/sold/${clientId}`);
     alert('The client has been updated.')
   }
   render() {

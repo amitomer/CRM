@@ -11,7 +11,7 @@ class Rows extends Component {
     }
   }
    componentDidMount= async ()=> {
-      let data= await axios.get('http://localhost:8080/clients');
+      let data= await axios.get('/clients');
       this.setState({ data: data.data })
   }
 

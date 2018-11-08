@@ -41,7 +41,7 @@ class Row extends Component {
     let surname = this.state.surname;
     surname= surname.charAt(0).toUpperCase() + surname.slice(1);
     name=name+" "+surname;
-    await axios.put(`http://localhost:8080/client/update/${clientId}`, { name: name, country:country });
+    await axios.put(`/client/update/${clientId}`, { name: name, country:country });
     this.updateClientScreen(name, country);
     alert('The client has been updated.')
     this.popUp();

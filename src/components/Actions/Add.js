@@ -34,7 +34,7 @@ class Add extends Component {
       alert("must fill out all the fields.")
       return;
     }
-    await axios.post('http://localhost:8080/actions/add', {_id: id, name:name, country:country, owner:owner, firstContact:"2018-03-04T22:00:00.000Z", sold:false, emailType:null});
+    await axios.post('/actions/add', {_id: id, name:name, country:country, owner:owner, firstContact:"2018-03-04T22:00:00.000Z", sold:false, emailType:null});
     id++;
     this.setState({id: id})
   }
