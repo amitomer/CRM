@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var api = require('./server/api');
 
-const SERVER_PORT = 8080;
+const SERVER_PORT = process.env.PORT || 8080;
 var app = express();
 
 app.use(function (req, res, next) {
@@ -18,7 +18,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', api);
-app.listen(process.env.PORT || SERVER_PORT, () => {
+app.listen(SERVER_PORT, () => {
   console.log("Server started on port " + SERVER_PORT);
 });
 
