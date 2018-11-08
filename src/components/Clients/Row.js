@@ -43,7 +43,6 @@ class Row extends Component {
     name=name+" "+surname;
     await axios.put(`/client/update/${clientId}`, { name: name, country:country });
     this.updateClientScreen(name, country);
-    alert('The client has been updated.')
     this.popUp();
   }
   updateClientScreen =(name, country)=>{
