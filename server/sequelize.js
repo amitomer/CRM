@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize(process.env.CONNECTION_STRING)
+const sequelize = new Sequelize(process.env.CONNECTION_STRING || 'mysql://sql12263196:8ZjNYYzMhy@sql12.freesqldatabase.com/sql12263196')
 sequelize
     .authenticate()
     .then(() => {
