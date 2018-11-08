@@ -10,12 +10,12 @@ class App extends Component {
       <Router>
       <div className="App">
       <div className="nav">
-      {<Link to="/clients"><span className="navClient">Clients</span></Link>}
+      {<Link to="/"><span className="navClient">Clients</span></Link>}
         {<Link to="/actions"><span className="navActions">Actions</span></Link>}
         {<Link to="/analytics"><span className="navAnalytics">Analytics</span></Link>}
         </div>
         
-        {<Route path="/clients" exact component={Clients}/>}
+        {<Route path="/" exact component={Clients}/>}
         {<Route path="/actions" exact component={Actions}/>}
         {<Route path="/analytics" exact component={Analytics}/>}
 
